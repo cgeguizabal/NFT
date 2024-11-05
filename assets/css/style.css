@@ -16,5 +16,148 @@
 body {
   font-family: "Outfit", sans-serif;
   font-size: 18px;
+  background-color: var(--dark-blue);
   /* Weights: 300, 400, 600 */
+}
+
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-container {
+  background-color: var(--middle-blue);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: minmax(125px, 300px);
+  box-shadow: 0 20px 15px 15px hsl(217, 54%, 10%);
+}
+
+.image-container > img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+header > h3 {
+  font-family: inherit;
+  margin-top: 1.5rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.text {
+  margin-top: 1rem;
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+
+.diamond {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--cyan);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.diamond > img {
+  width: auto;
+  height: 1.2rem;
+}
+
+.clock {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--soft-blue);
+  font-size: medium;
+}
+
+.clock > img {
+  width: auto;
+  height: 1.2rem;
+}
+
+.box1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+hr {
+  margin-top: 1.5rem;
+  height: 0.1rem;
+  border: none;
+  background-color: var(--gray-blue);
+  margin-bottom: 1rem;
+}
+.box2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--soft-blue);
+  font-size: 0.9em;
+}
+
+.box2 > p strong {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.box2 > img {
+  width: 2rem;
+  height: auto;
+  border-radius: 1rem;
+  border: 1.5px solid var(--white);
+}
+
+.image-container {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.icon-eye {
+  background-color: hsl(178, 100%, 50%, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 41% 42%;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.image-container:hover .icon-eye {
+  display: block;
+  cursor: pointer;
+}
+
+header h3:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.box2 p strong:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+  transform: translateY(-20px);
+}
+
+@media (max-width: 560px) {
+  .main-container {
+    grid-template-columns: 300px;
+  }
 }
